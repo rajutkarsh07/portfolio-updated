@@ -9,6 +9,7 @@ import {
   About,
   Error,
 } from "./pages/index";
+
 import { Navbar, Footer } from "./components/index";
 
 function App() {
