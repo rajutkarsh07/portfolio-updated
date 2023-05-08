@@ -5,7 +5,7 @@ import { OtherProjectCard } from "../../components";
 const Projects = () => {
   return (
     <div>
-      Projects
+      <h1 className="gradient__text">Projects</h1>
       <OtherProjectCard />
     </div>
   );

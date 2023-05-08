@@ -12,3 +12,21 @@
   align-items: center; */
   /* font-size: 50px; */
 }
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-btn {
+  padding: 12px 25px;
+  background: linear-gradient(
+    89.98deg,
+    #b16cea 0.02%,
+    #fe5f68 51.52%,
+    #ff9452 99.98%
+  );
+  border-radius: 120px;
+}
