@@ -1,0 +1,62 @@
+.majorprojectcard {
+  // border: 2px solid white;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 13px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .techstack {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 450px;
+      column-gap: 10px;
+      row-gap: 5px;
+      color: #c5c5c5;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      .icon {
+        font-size: 30px;
+        color: #989898;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: row;
+      padding: 30px 20px;
+      gap: 10px;
+      width: 642px;
+      background: #1c1c22;
+      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .image {
+    margin-left: -100px;
+    z-index: -1;
+  }
+}

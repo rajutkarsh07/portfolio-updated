@@ -1,0 +1,36 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .major-projects {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 60px;
+      font-weight: 600;
+    }
+  }
+
+  .other-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    .other-projects-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+  }
+}

@@ -1,12 +1,31 @@
 import React from "react";
 import "./Projects.scss";
-import { OtherProjectCard } from "../../components";
+import { MajorProjectCard, OtherProjectCard } from "../../components";
+import { Navbar } from "../../components";
 
 const Projects = () => {
   return (
-    <div>
-      <h1 className="gradient__text">Projects</h1>
-      <OtherProjectCard />
+    <div className="projects">
+      <Navbar />
+
+      <div className="major-projects">
+        <h1 className="gradient__text">Major Projects</h1>
+        <div className="other-projects-card">
+          <MajorProjectCard />
+          <MajorProjectCard />
+          <MajorProjectCard />
+        </div>
+      </div>
+
+      <div className="other-projects">
+        <h1 className="gradient__text">Other Projects</h1>
+        <div className="other-projects-card">
+          <OtherProjectCard />
+          <OtherProjectCard />
+          <OtherProjectCard />
+          <OtherProjectCard />
+        </div>
+      </div>
     </div>
   );
 };
