@@ -20,7 +20,6 @@ const Experience = () => {
               style={{
                 padding: "10px",
                 paddingLeft: `${i % 2 == 0 ? "500px" : "0px"}`,
-
                 position: "relative",
               }}
             >
@@ -28,6 +27,7 @@ const Experience = () => {
               <ExperienceCard data={dataPart} />
             </div>
           ))}
+          <div></div>
         </div>
       </div>
     </div>
