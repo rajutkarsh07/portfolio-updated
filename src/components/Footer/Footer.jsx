@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.scss";
 import { AiOutlineStar, AiOutlineFork } from "react-icons/ai";
-import cheerio from "cheerio";
-import axios from "axios";
 
 const Footer = () => {
-  const [fork, setFork] = useState("");
-  const [star, setStar] = useState("");
+  const [githubInfo, setGitHubInfo] = useState({
+    stars: null,
+    forks: null,
+  });
 
   useEffect(() => {
-    axios.get(
-      "https://github.com/rajutkarsh07/portfolio-updated",
-      (err, res, html) => {
-        if (!err && res.statusCode == 200) {
-          const $ = cheerio.load(html);
-          const forkData = $("#repo-network-counter");
-          setFork(forkData.text());
-
-          const starData = $("#repo-stars-counter-unstar");
-          setStar(starData.text());
-        }
-      }
-    );
+    fetch("https://api.github.com/repos/rajutkarsh07/portfolio-updated")
+      .then((response) => response.json())
+      .then((json) => {
+        const { stargazers_count, forks_count } = json;
+        setGitHubInfo({
+          stars: stargazers_count,
+          forks: forks_count,
+        });
+      })
+      .catch((e) => console.error(e));
   }, []);
 
   return (
@@ -31,14 +28,18 @@ const Footer = () => {
       className="footer"
     >
       <p>Designed & Built with 💖 by Utkarsh Raj</p>
-      <p>
-        <span>
-          <AiOutlineStar className="icon" /> {star}
-        </span>
-        <span>
-          <AiOutlineFork className="icon" /> {fork}
-        </span>
-      </p>
+      {githubInfo.stars && githubInfo.forks && (
+        <p>
+          <span>
+            <AiOutlineStar className="icon" />{" "}
+            {githubInfo.stars.toLocaleString()}
+          </span>
+          <span>
+            <AiOutlineFork className="icon" />{" "}
+            {githubInfo.forks.toLocaleString()}
+          </span>
+        </p>
+      )}
     </a>
   );
 };
