@@ -10,22 +10,27 @@ const Menu = () => {
       <NavLink to="/" className="items">
         <p className="item-num">01.</p>
         <p>Home</p>
+        <div></div>
       </NavLink>
       <NavLink to="/Projects" className="items">
         <p className="item-num">02.</p>
         <p>Projects</p>
+        <div></div>
       </NavLink>
       <NavLink className="items">
         <p className="item-num">03.</p>
         <p>About</p>
+        <div></div>
       </NavLink>
       <NavLink className="items">
         <p className="item-num">04.</p>
         <p>Experience</p>
+        <div></div>
       </NavLink>
-      <NavLink className="items">
+      <NavLink to="/contact" className="items">
         <p className="item-num">05.</p>
         <p>Contact</p>
+        <div></div>
       </NavLink>
     </>
   );

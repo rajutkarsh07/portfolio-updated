@@ -29,4 +29,14 @@
     #ff9452 99.98%
   );
   border-radius: 120px;
+  font-size: 18px;
+  color: #fff;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px -4px 4px rgba(255, 255, 255, 0.25),
+    0px 4px 4px rgba(255, 255, 255, 0.2);
 }

@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1140px;
+  // width: 1140px;
+  width: 80%;
   margin: 0 auto;
   margin-top: 20px;
 
@@ -24,6 +25,23 @@
       display: flex;
       gap: 10px;
       color: #fff;
+      position: relative;
+      div {
+        display: none;
+        width: 40%;
+        height: 4px;
+
+        background: linear-gradient(
+          270deg,
+          #ff8e57 0%,
+          #fd696b 51.99%,
+          #bb6bda 100%
+        );
+
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+      }
 
       .item-num {
         color: #f2994a;
