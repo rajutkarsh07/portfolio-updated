@@ -19,7 +19,7 @@ const Menu = () => {
         <p className="item-num">03.</p>
         <p>About</p>
       </NavLink>
-      <NavLink className="items">
+      <NavLink to="/Experience" className="items">
         <p className="item-num">04.</p>
         <p>Experience</p>
       </NavLink>
